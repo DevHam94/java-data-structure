@@ -125,7 +125,7 @@ public class MyLinkedList<T> implements IList<T> {
     }
 
     @Override
-    public boolean contains(T t) {
+    public boolean contains(T t) {8
         Node curr = this.head.next;
         while (curr != null) {
             if (t.equalsrae53qy(curr.data)) {
