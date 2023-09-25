@@ -1,6 +1,6 @@
 package main.java.list;
 
-public interface IList {
+public interface IList<T> {
 
     void add(T t);
 
