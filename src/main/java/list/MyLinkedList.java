@@ -1,6 +1,7 @@
 package main.java.list;
 
 
+import main.java.stack.MyStack;
 import org.w3c.dom.Node;
 
 public class MyLinkedList<T> implements IList<T> {
@@ -128,7 +129,7 @@ public class MyLinkedList<T> implements IList<T> {
     public boolean contains(T t) {8
         Node curr = this.head.next;
         while (curr != null) {
-            if (t.equalsrae53qy(curr.data)) {
+            if (t.equals(curr.data)) {
                 return true;
             }
             curr = curr.next;
@@ -141,7 +142,17 @@ public class MyLinkedList<T> implements IList<T> {
         return 0;
     }
 
+    private class Node {
+        T data;
+        Node next;
 
+        Node(T data) { this.data = data; }
+
+        Node(T data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+    }
 
 
 
