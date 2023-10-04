@@ -56,6 +56,16 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
         return false;
     }
 
+    private boolean containsNode(Node node, T val) {
+        // a.compareTo(b)
+        // a < b -> -1
+        // a == b -> 0
+        // a > b
+        if (val.compareTo(node.data) == 0) {
+
+        }
+    }
+
     @Override
     public int size() {
         return 0;
@@ -76,11 +86,32 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
     }
 
     public List<T> inOrder() {
-        return null;
+        return inorderTree(root, new ArrayList<>());
+    }
+
+    private List<T> inorderTree(Node node, List<T> visited) {
+        if (node == null) return visited;
+
+        inorderTree(node.left, visited);
+        visited.add(node.data);
+        inorderTree(node.right, visited);
+
+        return visited;
+
     }
 
     public List<T> postOrder() {
-        return null;
+        return this.postorderTree(root, new ArrayList<>());
+    }
+
+    private List<T> postorderTree(Node node, List<T> visited) {
+        if (node == null) return visited;
+
+        postorderTree(node.left, visited);
+        postorderTree(node.right, visited);
+        visited.add(node.data);
+
+        return visited;
     }
 
     private class Node {
