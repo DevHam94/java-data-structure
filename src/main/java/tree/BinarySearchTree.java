@@ -165,6 +165,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
         T data;
         Node left;
         Node right;
-        Node (int data) { this.data = data; }
+        Node (T data) { this.data = data; }
     }
 }
