@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BJ_2667_BFS {
@@ -23,5 +25,20 @@ public class BJ_2667_BFS {
                 map[i][j] = s.charAt(j) - '0';
             }
         }
+
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (map[i][j] == 1 && !visited[i][j]) {
+
+                }
+            }
+        }
+    }
+
+    public static int bfs(int N, int[][] map, boolean[][] visited, int x, int y) {
+        int size = 1;
+
     }
 }
