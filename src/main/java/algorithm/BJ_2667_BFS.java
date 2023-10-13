@@ -1,8 +1,6 @@
 package algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class BJ_2667_BFS {
 
@@ -31,14 +29,38 @@ public class BJ_2667_BFS {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (map[i][j] == 1 && !visited[i][j]) {
-
+                    result.add(bfs(N, map, visited, i, j));
                 }
             }
         }
-    }
 
+        System.out.println(result.size());
+
+        Collections.sort(result);
     public static int bfs(int N, int[][] map, boolean[][] visited, int x, int y) {
         int size = 1;
 
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[] {x, y});
+        visited[x][y] = true;
+
+        while (!queue.isEmpty()) {
+            int[] coordinate = queue.poll();
+
+            for (int i = 0; i < 4; i++) {
+                int nX = coordinate[0] + direction[i][0];
+                int nY = coordinate[1] + direction[i][1];
+
+                if (nX >= 0 && nY >= 0 && nX < N && nY < N
+                        && map[nX][nY] == 1 && !visited[nX][nY]) {
+                    size++;
+                    visited[nX][nY] = true;
+                    queue.add(new int[] {nX, nY});
+                }
+
+            }
+        }
+
+        return size;
     }
 }
