@@ -1,0 +1,14 @@
+
+m	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıØÊğ8±ó„»²1
+m	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ñ–Æ8²ó„»²1
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ˆß¨8³ó„»²1
+d
+java:S2259 "BA "NullPointerException" could be thrown; "curr" is nullable here.(‘Îîùÿÿÿÿ8Îó„»²1
+V
+java:S21306"9Use "Integer.parseInt" for this string-to-int conversion.(ıØÊğ8Ùó„»²1
+V
+java:S21309"9Use "Integer.parseInt" for this string-to-int conversion.(¡Ñ–Æ8Úó„»²1
+S
+java:S1612C"6Replace this lambda with method reference 'root::add'.(¨èßì8Üó„»²1
+L	java:S106N"+Replace this use of System.out by a logger.(Ò‘õ©ùÿÿÿÿ8İó„»²1
+L	java:S106P"+Replace this use of System.out by a logger.(‰ú£ûûÿÿÿÿ8Şó„»²1
